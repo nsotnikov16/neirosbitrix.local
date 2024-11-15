@@ -5,14 +5,14 @@ use Bitrix\Main\Localization\Loc;
 
 Loc::loadMessages(__FILE__);
 
-class neiros_connect extends CModule
+class neiros_integration extends CModule
 {
     function __construct()
     {
         $arModuleVersion = array();
         include(__DIR__ . "/version.php");
 
-        $this->MODULE_ID = "neiros.connect";
+        $this->MODULE_ID = "neiros.integration";
         $this->MODULE_VERSION = $arModuleVersion["VERSION"];
         $this->MODULE_VERSION_DATE = $arModuleVersion["VERSION_DATE"];
         $this->MODULE_NAME = Loc::getMessage("MODULE_NAME");

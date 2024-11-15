@@ -15,7 +15,11 @@ if (!function_exists('addNeirosScript')) {
 
         if (!$neiros_counter_id) return;
 
-        $script = file_get_contents(__DIR__ . '/include/script_counter.html');
+        $file_script_path = __DIR__ . '/include/script_counter.html';
+
+        if (!file_exists($file_script_path)) return;
+
+        $script = file_get_contents($file_script_path);
         $script = str_replace('#id_counter#', $neiros_counter_id, $script);
 
         Asset::getInstance()->addString(
