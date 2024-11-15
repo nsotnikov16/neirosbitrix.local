@@ -45,7 +45,7 @@ $form->BeginCustomField("MESSAGE", Loc::getMessage("NEIROS_OPTIONS_MESSAGE")); ?
 <?
 $form->EndCustomField("ID", '');
 
-$form->AddEditField("id_counter", Loc::getMessage("NEIROS_OPTIONS_ID_COUNTER"), true, [], Option::get($module_id, 'id_counter', ''));
+$form->AddEditField("id_counter", Loc::getMessage("NEIROS_OPTIONS_ID_COUNTER"), true, ['size' => 50], Option::get($module_id, 'id_counter', ''));
 $form->Buttons(["back_url" => $APPLICATION->GetCurPage(), 'btnApply' => false]);
 $form->Show();
 $form->EndTab();
